@@ -1,5 +1,8 @@
 #Ask the user their name and save it
-QUESTIONFORMAT= "{}\na. {}\nb. {}\nc. \n"
+import random
+goodc= ["good job gang", "if you were robert i would make out with you(you got it right)", "Jeffery epstien would be proud of you"]
+badc= ["...\n are you american?", "your a bad kitten pookie", "Nah man its an octopus of course its gonna be 8 duh."]
+QUESTIONFORMAT= "{}\na. {}\nb. {}\nc. {} \n"
 play ="yes"
 score =0
 name=input("Hey, what is your name")
@@ -14,7 +17,7 @@ while play =="yes":
                tries = int(tries)
                break
           except: 
-               print ("errrrrrrrrrrrrm what the filp buddy... that wasn't a numper pal. D:")
+               print ("errrrrrrrrrrrrm what the filp buddy... that wasn't a number pal. D:")
      score =0
      
 
@@ -40,10 +43,11 @@ while play =="yes":
           a= 8
           b= 7
           c= 4
-          awnser =input(" {}\nA. {} B. {} C {}}" QUESTIONFORMAT.format (questions, a, b, c)).lower()
+          awnser =input(QUESTIONFORMAT.format(questions, a, b, c)).lower()
           if awnser == a or awnser== "a":
                score +=1
-               print ("goodjob! you awnserd 8 your score is now {}!" .format(score))
+               print (goodc[2])
+               break
           elif awnser == "":
                print ("why aint you awnsering pookie, i know its you henry")
           elif awnser != "a" or awnser != "a" or awnser != "a":
@@ -53,8 +57,3 @@ while play =="yes":
                print("... \n Nah man its an octopus of course its gonna be 8 duh. also you now have a total score of",score,)
 
      play == input("Wanna play again")
-     
-     
-
-
-      
