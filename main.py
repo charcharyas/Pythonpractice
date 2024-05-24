@@ -1,7 +1,15 @@
 #Ask the user their name and save it
 import random
 goodc= ["good job gang", "if you were robert i would make out with you(you got it right)", "Jeffery epstien would be proud of you"]
-badc= ["...\n are you american?", "your a bad kitten pookie", "Nah man its an octopus of course its gonna be 8 duh."]
+badc= ["...\n are you american?", "your a bad kitten pookie", "GRRRRRRR YOU GOT IT WRONG YA TWINK"]
+QUESTIONS = ["what is the capital of France",
+           "how many tentacles does a 7 armed octopus have"]
+OPTIONS = [["paris", "Paris", "Berlin"],
+           ["8", "7", "6"]]
+SHORTOPTION =["a", "b", "c"]
+AWNSER = [2,1]
+
+
 QUESTIONFORMAT= "{}\na. {}\nb. {}\nc. {} \n"
 play ="yes"
 score =0
@@ -24,36 +32,12 @@ while play =="yes":
      #Tell them the correct answer
      attemps=tries
      while attemps > 0:
-          awnser=input("So, whats the capital of france")
-          if awnser == " Paris":
-               score +=1
-               print ("goodjob! you awnserd paris your score is now {}!" .format(score))
-               break
-          elif awnser == "":
-               print ("why aint you awnsering pookie, i know its you henry")  #End the quiz
-               attemps -= 1
-          else:
-               score -=1
-               print("... \n Are you American? also your score is now",score, )
-               attemps -= 1
-     
+     awnser = input(QUESTIONFORMAT.format(QUESTIONS[0], OPTIONS[0][0], OPTIONS[0][1], OPTIONS[0][2])).lower()
+          if awnser == OPTIONS[0][AWNSER[0]] or awnser == SHORTOPTION[AWNSER[0]]:
+               print(random.choice (goodc))
+          else 
      attemps=tries
      while attemps > 0:
-          questions = "So now, how many tentacles does a 7 armed octopus have."
-          a= 8
-          b= 7
-          c= 4
-          awnser =input(QUESTIONFORMAT.format(questions, a, b, c)).lower()
-          if awnser == a or awnser== "a":
-               score +=1
-               print (goodc[2])
-               break
-          elif awnser == "":
-               print ("why aint you awnsering pookie, i know its you henry")
-          elif awnser != "a" or awnser != "a" or awnser != "a":
-               print("thats not an awnser buddy")
-          else:
-               score -=1
-               print("... \n Nah man its an octopus of course its gonna be 8 duh. also you now have a total score of",score,)
+        
 
      play == input("Wanna play again")
