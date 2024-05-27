@@ -33,6 +33,9 @@ while play =="yes":
      awnser = input(QUESTIONFORMAT.format(QUESTIONS[0], OPTIONS[0][0], OPTIONS[0][1], OPTIONS[0][2])).lower()
           if awnser == OPTIONS[0][AWNSER[0]] or awnser == SHORTOPTION[AWNSER[0]]:
                print(random.choice (goodc))
-          else 
+          elif awnser in SHORTOPTION or awnser in OPTIONS[0]:
                print(random.choice (badc))
+          else
+               print("wrong!")
+               print("That wasn't an awnser pal.\nGRRRRRRR daddy is now mad at you")
      play == input("Wanna play again")
