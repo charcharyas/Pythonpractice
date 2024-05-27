@@ -27,8 +27,6 @@ while play =="yes":
           except: 
                print ("errrrrrrrrrrrrm what the filp buddy... that wasn't a number pal. D:")
      score =0
-     
-
      #Tell them the correct answer
      attemps=tries
      while attemps > 0:
@@ -36,8 +34,5 @@ while play =="yes":
           if awnser == OPTIONS[0][AWNSER[0]] or awnser == SHORTOPTION[AWNSER[0]]:
                print(random.choice (goodc))
           else 
-     attemps=tries
-     while attemps > 0:
-        
-
+               print(random.choice (badc))
      play == input("Wanna play again")
