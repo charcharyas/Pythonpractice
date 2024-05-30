@@ -28,14 +28,18 @@ while play =="yes":
                print ("errrrrrrrrrrrrm what the filp buddy... that wasn't a number pal. D:")
      score =0
      #Tell them the correct answer
+
+     score==0
+
+          for i in range(len(QUESTIONS)):
      attemps=tries
      while attemps > 0:
-     awnser = input(QUESTIONFORMAT.format(QUESTIONS[0], OPTIONS[0][0], OPTIONS[0][1], OPTIONS[0][2])).lower()
+          awnser = input(QUESTIONFORMAT.format(QUESTIONS[i], OPTIONS[i][0], OPTIONS[i][1], OPTIONS[i][2])).lower()
           if awnser == OPTIONS[0][AWNSER[0]] or awnser == SHORTOPTION[AWNSER[0]]:
-               print(random.choice (goodc))
-          elif awnser in SHORTOPTION or awnser in OPTIONS[0]:
-               print(random.choice (badc))
-          else
-               print("wrong!")
-               print("That wasn't an awnser pal.\nGRRRRRRR daddy is now mad at you")
-     play == input("Wanna play again")
+          print(random.choice (goodc))
+     elif awnser in SHORTOPTION or awnser in OPTIONS[0]:
+          print(random.choice (badc))
+     else
+          print("wrong!")
+          print("That wasn't an awnser pal.\nGRRRRRRR daddy is now mad at you")
+play == input("Wanna play again")
